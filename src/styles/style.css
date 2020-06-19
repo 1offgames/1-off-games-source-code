@@ -1,0 +1,386 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap");
+
+/** @format */
+
+/* Fancy Scrollbar */
+
+html {
+  --scrollbarBG: rgba(0, 0, 0, 0.308);
+  --thumbBG: rgba(0, 0, 0, 0.842);
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+
+  border: 3px solid var(--scrollbarBG);
+}
+
+/* Globals */
+body {
+  padding-top: 60px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -48px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.bring-to-front {
+  z-index: 5;
+}
+
+.alert-position {
+  margin-top: 70px;
+  z-index: 2;
+}
+
+.alert {
+  animation-name: fadeout-after-3-seconds;
+  animation-delay: 3s;
+  animation-duration: 0.5s;
+  /*animation-iteration-count: 1;*/
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeout-after-3-seconds {
+  from {
+  }
+  50% {
+    opacity: 50%;
+  }
+  to {
+    display: none;
+    visibility: hidden;
+    z-index: -9;
+    opacity: 0;
+  }
+}
+
+.navbar-position {
+  z-index: 3;
+}
+
+#navbar-dropdown {
+  background-color: #303030fc;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+
+.full-height {
+  min-height: calc(100vh - 130px);
+  z-index: 1;
+}
+
+.footer-height {
+  height: 70px;
+}
+
+.header-height {
+  height: 70px;
+}
+
+/* Add Product */
+div#addProduct {
+  padding-top: 10px;
+}
+
+/* Product Page */
+.review {
+  margin-top: 20px;
+  background-color: #303030;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.noreviews {
+  text-align: center;
+  color: #3b3b3b;
+}
+
+.text-sm {
+  font-size: smaller;
+}
+
+hr {
+  margin-bottom: 0;
+  background-color: #222;
+}
+
+/* Categories Page */
+.card-img-top {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+}
+
+/*Cart Page*/
+.stripe-button-el {
+  display: inline-block !important;
+  font-weight: 400 !important;
+  color: #fff !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  border: 1px solid #ce0707 !important;
+  padding: 0.5rem 1rem !important;
+  font-size: 1.171875rem !important;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out !important;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out !important;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+  -webkit-box-shadow 0.15s ease-in-out !important;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  background-image: initial !important;
+  background-color: #ce0707 !important;
+  line-height: 1.5 !important;
+  border-radius: 0.3rem;
+
+}
+.stripe-button-el span {
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  display: initial !important;
+  position: initial !important;
+  padding: 0.5rem 1rem !important;
+  height: initial !important;
+  line-height: 1.5 !important;
+  background: initial !important;
+  font-size: 1.171875rem !important;
+  color: #fff !important;
+  font-weight: 400 !important;
+  text-shadow: initial !important;
+  -webkit-box-shadow: initial !important;
+  -moz-box-shadow: initial !important;
+  -ms-box-shadow: initial !important;
+  -o-box-shadow: initial !important;
+  box-shadow: initial !important;
+  -webkit-border-radius: initial !important;
+  -moz-border-radius: initial !important;
+  -ms-border-radius: initial !important;
+  -o-border-radius: initial !important;
+  border-radius: initial !important;
+}
+
+.stripe-button-el:hover {
+  color: #fff !important;
+  background-color: #a10606 !important;
+  border-color: #a10606 !important;
+}
+
+.stripe-button-el:focus,
+.stripe-button-el.focus {
+  color: #fff !important;
+  background-color: #ce0707 !important;
+  border-color: #ce0707 !important;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(235, 103, 89, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem rgba(235, 103, 89, 0.5) !important;
+}
+
+.stripe-button-el.disabled,
+.stripe-button-el:disabled {
+  color: #fff !important;
+  background-color: #ce0707 !important;
+  border-color: #ce0707 !important;
+}
+
+.stripe-button-el:not(:disabled):not(.disabled):active,
+.stripe-button-el:not(:disabled):not(.disabled).active,
+.show > .stripe-button-el.dropdown-toggle {
+  color: #fff !important;
+  background-color: #ce0707 !important;
+  border-color: #ce0707 !important;
+}
+
+.stripe-button-el:not(:disabled):not(.disabled):active:focus,
+.stripe-button-el:not(:disabled):not(.disabled).active:focus,
+.show > .stripe-button-el.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(235, 103, 89, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem rgba(235, 103, 89, 0.5) !important;
+}
+/* Order History Page */
+.li-img {
+  width: 100%;
+  height: 20vh;
+  object-fit: cover;
+}
+
+/* Login Page */
+.line-through {
+  text-decoration: line-through;
+}
+
+/* TOS Page */
+.disable-navigation {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 4; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+/* Settings Page */
+.placeholder-gray {
+  color: gray;
+}
+
+/* HOME PAGE */
+#top-image {
+  height: 350px;
+  width: 100%;
+  background-image: url("../img/homepage/battletoads.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+}
+
+.game-row {
+  height: 337px;
+  background-color: rgba(46, 46, 46, 0.836);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -160px;
+  margin-bottom: 195px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+  display: flex;
+}
+
+@media (min-width: 576px) {
+  .game-row {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .game-row {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .game-row {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .game-row {
+    max-width: 1140px;
+  }
+}
+
+.game-container {
+  height: 310px;
+  width: 240px;
+  border-radius: 5px;
+  background-image: url(../img/homepage/Battletoads_cover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-right: 5px;
+  margin-left: 5px;
+  float: left;
+  cursor: pointer;
+}
+
+.game-container img {
+  height: 190px;
+  width: 240px;
+  visibility: hidden;
+}
+
+.game-text {
+  position: absolute;
+  bottom: 5px;
+  width: 240px;
+  height: fit-content;
+  background-color: rgba(0, 0, 0, 0.808);
+  /* backdrop-filter: blur(5px); */
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+  line-height: 35px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.game-row::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.game-row::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+
+  border: 3px solid var(--scrollbarBG);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.game-row::-webkit-scrollbar {
+  width: 11px;
+}
+.game-row {
+  scrollbar-width: 11px;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+.game-row-header {
+  margin-top: -160px;
+  margin-bottom: 160px;
+  background-color: rgba(46, 46, 46, 0.836);
+  backdrop-filter: blur(5px);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  width: max-content;
+}
+
