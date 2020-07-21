@@ -2,10 +2,12 @@
 
 #### Note: This is a mirror of the original repo, that was originaly hosted on our campuses private GitLab server.
 
+#### View Final Result Hosted on 3rd party server: [1-OFF Games](http://69.87.218.170/)
+
 ## What is 1-OFF Games
 
 
-1-Off Games is a Canadian video game retailer, specializing in used and
+1-Off Games is a fictional Canadian video game retailer, specializing in used and
         rare video games. They are a mid-sized chain of brick-and-mortar stores
         found in major cities throughout British Columbia and Alberta. Over the
         past decade they have seen consistent growth and expansion and until
