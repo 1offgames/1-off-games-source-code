@@ -2,7 +2,7 @@
 
 #### Note: This is a mirror of the original repo, that was originaly hosted on our campuses private GitLab server.
 
-#### View Final Result Hosted on 3rd party server: [1-OFF Games](http://69.87.218.170/)
+#### View Final Result Hosted on 3rd party server: [1-OFF Games](http://oneoff.games/)
 
 ## What is 1-OFF Games
 
