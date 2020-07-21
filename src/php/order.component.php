@@ -31,7 +31,7 @@ function order($orderID, $orderDate, $orderStatus, $orderTotal, $link)
   echo "<h5 class='m-0'>Order #$orderID</h5><h5 class='m-0'>Order Date: $orderDate</h5><h5 class='m-0'>Order Total: $$orderTotal</h5><a class='btn btn-danger' href='./db/receipts/$recName.txt' download>Download</a>";
   // orderLineItem.component.php - Pulls the line items from each order
   while ($row = mysqli_fetch_assoc($lineItemResult)) {
-    orderLineItem($row['product_name'], $row['product_image'], $row['order_price'], $row['product_id'], $row['order_id']);
+    orderLineItem($row['product_name'], $row['product_image'], $row['order_price'], $row['product_id']);
   }
   echo "</ul>";
   echo "</div>";

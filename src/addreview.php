@@ -3,6 +3,7 @@ session_start();
 include('./php/mysqli_connect.php');
 require_once 'php/navbar.php';
 require_once 'php/head.php';
+require_once 'php/footer.php';
 
 error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
 $productNumber = $_GET['productid'];
@@ -32,7 +33,7 @@ $userid = $_SESSION['userID'];
 $sql = "SELECT `orders`.`order_id`, `orders_items`.`product_id`, `orders`.`customer_id` FROM `orders` INNER JOIN `orders_items` ON  `orders`.`order_id` = `orders_items`.`order_id` WHERE  `orders`.`customer_id` = $userid and `orders_items`.`product_id` = $productNumber";
 $result = mysqli_query($link, $sql);
 // Product is not in order history!! Ridirect to redirect!
-if (mysqli_num_rows($result) == 0) { 
+if (mysqli_num_rows($result) == 0) {
     header("Location: ./$redirect?productid=$productNumber");
     exit();
 }
@@ -110,8 +111,9 @@ head();
     <?php
     navbar();
     ?>
-    <div class="container">
-        <div class="jumbotron" style="margin-top: 20px; padding-top: 20px; padding-bottom: 20px;">
+
+    <div class="container full-height">
+        <div class="jumbotron mt-4" style="margin-top: 20px; padding-top: 20px; padding-bottom: 20px;">
             <h3>You are adding a review for:</h3>
             <?php
             echo "<h4>$productName - $productPrice</h4>";
@@ -142,6 +144,10 @@ head();
             </form>
         </div>
     </div>
+
+    <?php
+    footer();
+    ?>
 
     <!-- JavaScript -->
     <script src='js/jquery.min.js'></script>

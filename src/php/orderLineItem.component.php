@@ -1,11 +1,10 @@
 <?php
 require_once('createHyphenatedName.php');
 
-function orderLineItem($productName, $productImage, $orderPrice, $productID, $orderID)
+function orderLineItem($productName, $productImage, $orderPrice, $productID)
 {
-  // createHREF.php
+  // createHyphenatedName.php
   $placeholder = createHyphenatedName($productName);
-  
 
   $element = "
     <li class='list-group-item d-flex justify-content-between align-items-center m-0'>

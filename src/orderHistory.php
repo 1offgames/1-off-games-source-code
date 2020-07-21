@@ -41,7 +41,7 @@ head();
             </div>
             <!-- Display Orders -->
             <?php
-            $orderQuery = "SELECT * FROM orders o WHERE o.customer_id = $customer_id ORDER BY o.order_date DESC";
+            $orderQuery = "SELECT * FROM orders o WHERE o.customer_id = $customer_id ORDER BY o.order_id DESC";
             $orderResult = mysqli_query($link, $orderQuery);
 
             if (mysqli_num_rows($orderResult) != 0) {
@@ -53,7 +53,7 @@ head();
                 echo "
                 <div class='col-md my-4 pl-2'>
                     <h4>You have not made any orders.</h4>
-                    <h5>Please click <a href='products.php'>here</a> to see our available products.</h5>
+                    <h5>Add items on the <a href='products.php'>View Products</a> page</h5>
                 </div>";
             }
             ?>

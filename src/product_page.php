@@ -3,6 +3,7 @@ include('./php/mysqli_connect.php');
 require_once 'php/navbar.php';
 require_once 'php/head.php';
 require_once 'php/displayAlerts.php';
+require_once 'php/footer.php';
 
 error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
 
@@ -111,11 +112,11 @@ head();
       <?php
 
       if ($addedtocart == 'false') :
-        echo "<a id=\"addtocartBTN\" class=\"btn btn-danger btn-lg\" href=\"addtocart.php?productid=$productNumber&redirect=product_page.php\">Something went wrong!</a>";
+        echo "<a id=\"addtocartBTN\" class=\"btn btn-danger btn-lg m-3\" href=\"addtocart.php?productid=$productNumber&redirect=product_page.php\">Something went wrong!</a>";
       elseif ($addedtocart == 'true') :
-        echo "<a id=\"addtocartBTN\" class=\"btn btn-success btn-lg\" href=\"addtocart.php?productid=$productNumber&redirect=product_page.php\">✔Added!</a>";
+        echo "<a id=\"addtocartBTN\" class=\"btn btn-success btn-lg m-3\" href=\"addtocart.php?productid=$productNumber&redirect=product_page.php\">✔Added!</a>";
       else :
-        echo "<a id=\"addtocartBTN\" class=\"btn btn-danger btn-lg\" href=\"addtocart.php?productid=$productNumber&redirect=product_page.php\">Add To Cart</a>";
+        echo "<a id=\"addtocartBTN\" class=\"btn btn-danger btn-lg m-3\" href=\"addtocart.php?productid=$productNumber&redirect=product_page.php\">Add To Cart</a>";
       endif;
 
 
@@ -160,16 +161,21 @@ head();
       }
       ?>
     </div>
+  </div>
 
-    <!-- JavaScript -->
-    <script src='js/jquery.min.js'></script>
-    <script src='js/bootstrap.bundle.min.js'></script>
-    <script src='js/functions.js'></script>
-    <script>
-      <?php
-      echo "document.getElementById(\"page_title\").innerHTML = \"$productName - 1-OFF Games\";";
+  <?php
+  footer();
+  ?>
 
-      $el = "
+  <!-- JavaScript -->
+  <script src='js/jquery.min.js'></script>
+  <script src='js/bootstrap.bundle.min.js'></script>
+  <script src='js/functions.js'></script>
+  <script>
+    <?php
+    echo "document.getElementById(\"page_title\").innerHTML = \"$productName - 1-OFF Games\";";
+
+    $el = "
       var justAdded = false;
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
@@ -198,9 +204,9 @@ head();
       }
       ";
 
-      echo $el;
-      ?>
-    </script>
+    echo $el;
+    ?>
+  </script>
 </body>
 
 </html>
