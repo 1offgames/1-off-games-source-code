@@ -30,13 +30,6 @@
         Bootstrap CSS framework.
         
         
-## Project Overview
-
- The goal for this project was to learn Python and Git in a fun and
-        enjoyable way. I plan to revisit this project soon to fix any changes
-        proposed changes that I have, and later to learn Machine Learning
-        related topics.
-        
 ## Problems & Challenges
 
 There were some growing pains related to learning PHP, a large one being
